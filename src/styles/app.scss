@@ -1,5 +1,6 @@
 @use "mixins";
 @use "dashboard";
+@use "products";
 
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, Helvetica, sans-serif;
@@ -147,5 +148,25 @@ a {
             border-right: none;
         }
 
+    }
+}
+
+.table-pagination {
+    @include mixins.flex;
+    padding: 2rem;
+
+    >button {
+        padding: 0.5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgba(0, 115, 255);
+        color: white;
+
+        &:disabled {
+            background-color: rgba(0, 155, 255, 0.1);
+            cursor: not-allowed;
+        }
     }
 }
