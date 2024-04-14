@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import AdminSidebar from "../component/AdminSidebar";
 
 const Customers = () => {
   return (
-    <div>Customers</div>
-  )
-}
+    <div className="adminContainer">
+      {/* Sidebar */}
+      <AdminSidebar />
 
-export default Customers
+      {/* Main */}
+      <main>Main Content of Dashboard</main>
+    </div>
+  );
+};
+
+export default Customers;
