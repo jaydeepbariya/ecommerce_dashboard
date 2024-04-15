@@ -54,7 +54,7 @@ const NewProduct = () => {
                 type="number"
                 placeholder="Stock"
                 value={stock}
-                onChange={(e) => setPrice(Number(e.target.value))}
+                onChange={(e) => setStock(Number(e.target.value))}
               />
             </div>
             <div>
