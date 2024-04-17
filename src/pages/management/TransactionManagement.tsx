@@ -62,7 +62,7 @@ const TransactionManagement = () => {
       <main className="product-management">
         <section
           style={{
-            padding: "2rem"
+            padding: "1rem"
           }}
           >
           <h2>Order Items</h2>

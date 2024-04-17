@@ -19,7 +19,7 @@
 
 .product-management {
 
-    @include mixins.flex(row, center, unset, 2rem);
+    @include mixins.flex(row, center, center, 2rem);
 
     >section {
         overflow-y: auto;
@@ -81,7 +81,7 @@
             }
 
             >img {
-                @include mixins.square(5rem);
+                @include mixins.square(4rem);
                 object-fit: cover;
                 border-radius: 5px;
             }
@@ -100,14 +100,14 @@
                     @include mixins.inputStyle(100%, 1rem, unset, 1px solid rgba(13, 13, 13, 0.196));
                     border-radius: 5px;
                 }
+            }
 
-                >button {
-                    padding: 1rem;
-                    border: none;
-                    background-color: rgb(5, 107, 224);
-                    width: 100%;
-                    border-radius: 5px;
-                }
+            >button {
+                padding: 1rem;
+                border: none;
+                background-color: rgb(5, 107, 224);
+                width: 100%;
+                border-radius: 5px;
             }
         }
     }

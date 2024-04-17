@@ -1,8 +1,17 @@
-import { RiCoinFill, RiCoupon3Fill, RiDashboardFill, RiShoppingBag3Fill } from "react-icons/ri";
+import {
+  RiCoinFill,
+  RiCoupon3Fill,
+  RiDashboardFill,
+  RiShoppingBag3Fill,
+} from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 import { AiFillMoneyCollect } from "react-icons/ai";
 import { IoIosPeople } from "react-icons/io";
-import { IoBarChartSharp, IoPieChartSharp, IoStopwatchSharp } from "react-icons/io5";
+import {
+  IoBarChartSharp,
+  IoPieChartSharp,
+  IoStopwatchSharp,
+} from "react-icons/io5";
 import { MdStackedLineChart } from "react-icons/md";
 
 const AdminSidebar = () => {
@@ -110,25 +119,27 @@ const AdminSidebar = () => {
         <ul>
           <li
             style={{
-              backgroundColor: location.pathname.includes("/admin/apps/stopwatch")
+              backgroundColor: location.pathname.includes(
+                "/admin/apps/stopwatch"
+              )
                 ? "rgb(0,255,0,0.2)"
                 : "white",
             }}
           >
             <Link to="/admin/apps/stopwatch">
-            <IoStopwatchSharp />
+              <IoStopwatchSharp />
               StopWatch
             </Link>
           </li>
           <li
             style={{
-              backgroundColor: location.pathname.includes("/admin/apps/stopwatch")
+              backgroundColor: location.pathname.includes("/admin/apps/coupon")
                 ? "rgb(0,255,0,0.2)"
                 : "white",
             }}
           >
             <Link to="/admin/apps/stopwatch">
-            <RiCoupon3Fill />
+              <RiCoupon3Fill />
               Coupon
             </Link>
           </li>
@@ -140,7 +151,7 @@ const AdminSidebar = () => {
             }}
           >
             <Link to="/admin/apps/toss">
-            <RiCoinFill />
+              <RiCoinFill />
               Toss
             </Link>
           </li>
