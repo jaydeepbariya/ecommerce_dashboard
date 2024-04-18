@@ -133,18 +133,6 @@ const AdminSidebar = () => {
           </li>
           <li
             style={{
-              backgroundColor: location.pathname.includes("/admin/apps/coupon")
-                ? "rgb(0,255,0,0.2)"
-                : "white",
-            }}
-          >
-            <Link to="/admin/apps/stopwatch">
-              <RiCoupon3Fill />
-              Coupon
-            </Link>
-          </li>
-          <li
-            style={{
               backgroundColor: location.pathname.includes("/admin/apps/toss")
                 ? "rgb(0,255,0,0.2)"
                 : "white",
