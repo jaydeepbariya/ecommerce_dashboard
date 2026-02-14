@@ -1,7 +1,7 @@
 import { ReactElement, useCallback, useState } from "react";
 import AdminSidebar from "../component/AdminSidebar";
 import TableHoC from "../component/TableHoC";
-import { actions, Column } from "react-table";
+import { Column } from "react-table";
 import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
 

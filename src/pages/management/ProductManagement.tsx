@@ -10,10 +10,10 @@ const ProductManagement = () => {
   const [stock, setStock] = useState<number>(0);
   const [photo, setPhoto] = useState<string>(img);
 
-  const [ nameUpdate, setNameUpdate ] = useState<string>(name);
-  const [ priceUpdate, setPriceUpdate ] = useState<number>(price);
-  const [ stockUpdate, setStockUpdate ] = useState<number>(stock);
-  const [ photoUpdate, setPhotoUpdate ] = useState<string>(photo);
+  const [ nameUpdate ] = useState<string>(name); // eslint-disable-line @typescript-eslint/no-unused-vars
+  const [ priceUpdate ] = useState<number>(price); // eslint-disable-line @typescript-eslint/no-unused-vars
+  const [ stockUpdate ] = useState<number>(stock); // eslint-disable-line @typescript-eslint/no-unused-vars
+  const [ photoUpdate ] = useState<string>(photo); // eslint-disable-line @typescript-eslint/no-unused-vars
   
   const changeImageHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const file: File | undefined = e.target.files?.[0];
@@ -53,7 +53,7 @@ const ProductManagement = () => {
         </section>
 
         <article>
-          <form onSubmit={()=>submitHandler(e)}>
+          <form onSubmit={(e)=>submitHandler(e)}>
             <h2>Manage</h2>
             <div>
               <label htmlFor="name">Name</label>

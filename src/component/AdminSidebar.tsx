@@ -1,6 +1,5 @@
 import {
   RiCoinFill,
-  RiCoupon3Fill,
   RiDashboardFill,
   RiShoppingBag3Fill,
 } from "react-icons/ri";

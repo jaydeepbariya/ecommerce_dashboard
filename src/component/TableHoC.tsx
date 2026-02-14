@@ -4,7 +4,6 @@ import {
   Column,
   TableOptions,
   useSortBy,
-  usePagination,
 } from "react-table";
 
 function TableHoC<T extends object>(
@@ -18,23 +17,14 @@ function TableHoC<T extends object>(
     const options: TableOptions<T> = {
       columns,
       data,
-      initialState: {
-        pageSize: 4,
-      },
     };
 
     const {
       getTableBodyProps,
       headerGroups,
-      page,
+      rows,
       prepareRow,
-      nextPage,
-      previousPage,
-      canNextPage,
-      canPreviousPage,
-      pageCount,
-      state: { pageIndex },
-    } = useTable(options, useSortBy, usePagination);
+    } = useTable(options, useSortBy);
 
     return (
       <div className={containerClassName}>
@@ -62,11 +52,11 @@ function TableHoC<T extends object>(
             ))}
           </thead>
           <tbody {...getTableBodyProps()}>
-            {page.map((row) => {
+            {rows.map((row: any) => {
               prepareRow(row);
               return (
                 <tr {...row.getRowProps()}>
-                  {row.cells.map((cell) => (
+                  {row.cells.map((cell: any) => (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
                   ))}
                 </tr>
@@ -77,15 +67,7 @@ function TableHoC<T extends object>(
 
         {showPagination && (
           <div className="table-pagination">
-            <button disabled={!canPreviousPage} onClick={previousPage}>
-              Prev
-            </button>
-            <span>{pageIndex + 1}</span>
-            <span>of</span>
-            <span>{pageCount}</span>
-            <button disabled={!canNextPage} onClick={nextPage}>
-              Next
-            </button>
+            <p>Showing {rows.length} items</p>
           </div>
         )}
       </div>
